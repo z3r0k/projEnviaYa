@@ -3,32 +3,33 @@ const Schema = mongoose.Schema
 
 let ordenSchema = new Schema({
     numOrden: {
-        type: Number,
+        type: String,
         min: 20,
-        required: true,
+        required: true
     },
     inputFecha: {
         type: Date,
     },
     inputDirOrigen: {
         type: String,
-        required: true,
+        required: true
     },
     inputDirDestino: {
         type: String,
-        required: true,
+        required: true
     },
     inputTelefono: {
         type: Number,
         min: 868,
-        required: true,
+        required: true
     },
     selectEstado: {
         type: String,
-        required: true,
+        required: true
     },
     userId: {
-        type: Schema.Types.ObjectId, ref: 'User'
+        type: Schema.Types.ObjectId, ref: 'User',
+        required: true
     }
 }, {
     collection: 'Orden'
